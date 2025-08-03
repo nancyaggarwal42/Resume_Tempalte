@@ -1,0 +1,321 @@
+/* Sidebar Styles - Modern Gradient Theme */
+.temp11-sidebar {
+  background: linear-gradient(135deg, #2c3e50  0%, #6e48aa 100%);
+  color: white;
+  padding: 25px;
+  box-shadow: 5px 0 15px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transform: translateX(-100%);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: auto;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.temp11-sidebar.open {
+  transform: translateX(0);
+}
+
+/* Modern Toggle Button */
+.temp11-sidebar-toggle {
+  position: fixed;
+  top: 25px;
+  left: 25px;
+  background: linear-gradient(135deg, #6e48aa 0%, #9d50bb 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1100;
+  box-shadow: 0 4px 15px rgba(110, 72, 170, 0.3);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.temp11-sidebar-toggle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(110, 72, 170, 0.4);
+}
+
+.temp11-sidebar-toggle svg {
+  font-size: 1.6rem;
+}
+/* Update the existing button styles */
+.temp11-sidebar-btn {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 15px;
+  letter-spacing: 0.3px;
+  width: 100%; /* Ensure full width */
+  box-sizing: border-box; /* Include padding in width calculation */
+  text-align: left;
+}
+
+/* Dropdown Styles */
+.temp11-dropdown {
+  position: relative;
+  width: 100%;
+  margin-bottom: 12px; /* Consistent spacing */
+}
+
+.temp11-dropdown-menu {
+  position: relative;
+  width: 100%;
+  margin: 5px 0 12px 0; /* Consistent spacing */
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  animation: fadeIn 0.3s ease;
+}
+
+.temp11-dropdown-item {
+  width: 100%;
+  padding: 12px 18px; /* Match main button padding */
+  background: transparent;
+  border: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px; /* Match main button font size */
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+/* Chevron alignment */
+.temp11-sidebar-btn .temp11-dropdown-chevron {
+  margin-left: auto;
+  font-size: 12px;
+  transition: transform 0.2s ease;
+}
+
+.temp11-dropdown[data-open="true"] .temp11-dropdown-chevron {
+  transform: rotate(180deg);
+}
+
+/* Ensure all buttons have same visual weight */
+.temp11-sidebar-btn.primary,
+.temp11-sidebar-btn.secondary,
+.temp11-dropdown-item {
+  min-height: 44px; /* Consistent minimum height */
+}
+
+/* Remove margin from last dropdown to maintain spacing */
+.temp11-sidebar-actions > .temp11-dropdown:last-child {
+  margin-bottom: 0;
+}
+
+/* Header Section */
+.temp11-sidebar-header {
+  margin-bottom: 35px;
+  text-align: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.temp11-sidebar-header h3 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  background: linear-gradient(to right, #fff, #f3f3f3);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.temp11-sidebar-header p {
+  margin: 8px 0 0;
+  font-size: 14px;
+  opacity: 0.85;
+  font-weight: 400;
+}
+
+/* Action Buttons */
+.temp11-sidebar-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 35px;
+}
+
+.temp11-sidebar-btn.primary {
+  background: linear-gradient(to right, #a18cd1, #fbc2eb); /* Soft purple to pink gradient */
+  color: #333;
+  box-shadow: 0 4px 10px rgba(171, 130, 255, 0.3); /* Subtle shadow matching the gradient */
+}
+
+.temp11-sidebar-btn.primary:hover {
+  background: linear-gradient(to right, #9b59b6, #e91e63); /* Slightly darker hover effect */
+  transform: translateY(-2px);
+  color: #fff;
+  box-shadow: 0 6px 15px rgba(171, 130, 255, 0.4); /* Enhanced hover shadow */
+}
+
+.temp11-sidebar-btn.secondary {
+  background: rgba(255, 255, 255, 0.80);
+  color: #333;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+}
+
+.temp11-sidebar-btn.secondary:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Section Styling */
+.temp11-sidebar-section {
+  margin-bottom: 30px;
+}
+
+.temp11-sidebar-section h4 {
+  margin: 0 0 18px;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: rgba(255, 255, 255, 0.9);
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Design Options */
+.temp11-design-options {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.temp11-color-options h5,
+.temp11-font-options h5 {
+  margin: 0 0 12px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.temp11-color-option {
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.temp11-color-option:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.temp11-color-option.active {
+  transform: scale(1.08);
+  box-shadow: 0 0 0 3px white, 0 0 0 5px rgba(110, 72, 170, 0.5);
+}
+
+.temp11-font-select {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+.temp11-font-select:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.temp11-font-select:focus {
+  outline: none;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.temp11-font-select option {
+  background: #6e48aa;
+  color: white;
+}
+
+
+/* Footer */
+.temp11-sidebar-footer {
+  margin-top: auto;
+  font-size: 13px;
+  opacity: 0.7;
+  text-align: center;
+  padding-top: 25px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Responsive Styles */
+@media (min-width: 992px) {
+  .temp11-sidebar {
+    transform: translateX(0);
+    position: relative;
+    height: auto;
+  }
+  
+  .temp11-sidebar-toggle {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .temp11-sidebar {
+    width: 300px;
+    padding: 20px;
+  }
+  
+  .temp11-color-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .temp11-sidebar {
+    width: 100%;
+    padding: 15px;
+  }
+  
+  .temp11-sidebar-toggle {
+    width: 50px;
+    height: 50px;
+    top: 15px;
+    left: 15px;
+  }
+}
